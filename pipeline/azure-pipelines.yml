@@ -67,6 +67,9 @@ stages:
         echo "* Logs dos jobs de teste"
         kubectl get jobs -n $(namespaceTests)
         for job in $(kubectl get jobs -n $(namespaceTests) -o jsonpath='{.items[*].metadata.name}'); do
+          echo
+          echo
+          echo
           echo "** Logs do job: $job"
           kubectl logs job/$job -n $(namespaceTests)
         done

@@ -36,3 +36,8 @@ Pipeline executado com sucesso:
 A imagem anterior mostra 4 jobs criados para a execução em paralelo dos testes, além de um job starter e outro initializer. Essas estruturas foram criadas com base nas definições que estão no arquivo **run-k6-apicontagem.yaml**, que corresponde a um objeto **TestRun** do k6 Operator:
 
 ![YAML TestRun](img/testrun-01.png)
+
+Um ConfigMap foi criado para o arquivo com os testes:
+
+
+E ao realizar o kubectl apply para um objeto TestRun

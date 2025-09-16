@@ -37,7 +37,14 @@ A imagem anterior mostra 4 jobs criados para a execução em paralelo dos testes
 
 ![YAML TestRun](img/testrun-01.png)
 
-Um ConfigMap foi criado para o arquivo com os testes:
+Um **ConfigMap** foi criado para o arquivo com os testes:
 
+```bash
+kubectl create configmap tests-contagem --from-file $(loadTestsScript) -n $(namespaceTests)
+```
 
-E ao realizar o kubectl apply para um objeto TestRun
+E ao realizar o kubectl apply para o objeto **TestRun** o arquivo associado ao **ConfigMap** será executado:
+
+```bash
+kubectl apply -f run-k6-apicontagem.yaml -n $(namespaceTests)
+```

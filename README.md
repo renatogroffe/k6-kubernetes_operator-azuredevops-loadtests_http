@@ -32,3 +32,7 @@ Esta configuração será aplicada no script de testes, via Replace token:
 Pipeline executado com sucesso:
 
 ![Pipeline após execução](img/pipeline-resultado-01.png)
+
+A imagem anterior mostra 4 jobs criados para a execução em paralelo dos testes, além de um job starter e outro initializer. Essas estruturas foram criadas com base nas definições que estão no arquivo **run-k6-apicontagem.yaml**, que corresponde a um objeto **TestRun** do k6 Operator:
+
+![YAML TestRun](img/testrun-01.png)

@@ -1,0 +1,10 @@
+apiVersion: k6.io/v1alpha1
+kind: TestRun
+metadata:
+  name: run-k6-apicontagem
+spec:
+  parallelism: 4
+  script:
+    configMap:
+      name: tests-contagem
+      file: tests-contagem.js
